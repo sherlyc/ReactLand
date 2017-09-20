@@ -55,7 +55,7 @@ function NameWithHandle({ author }) {
 
 const Time = ({ time }) => {
   const timeString = moment(time).fromNow();
-  <span className="time">{timeString}</span>;
+  return <span className="time">{timeString}</span>;
 };
 
 const ReplyButton = () => <i className="fa fa-reply reply-button" />;
