@@ -30,7 +30,7 @@ var testTweet = {
     name: "IAMA Cat Person"
   },
   likes: 2,
-  retweets: 0,
+  retweets: 5,
   timestamp: "2016-07-30 21:24:37"
 };
 
@@ -60,7 +60,7 @@ const Time = ({ time }) => {
 
 const ReplyButton = () => <i className="fa fa-reply reply-button" />;
 
-const getRetweetButton = count => {
+const getRetweetCount = count => {
   if (count > 0) {
     return <span className="retweet-count">{count}</span>;
   } else {
