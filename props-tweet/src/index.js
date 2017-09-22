@@ -60,18 +60,18 @@ const Time = ({ time }) => {
 
 const ReplyButton = () => <i className="fa fa-reply reply-button" />;
 
-const getRetweetCount = count => {
+function Count({ count }) {
   if (count > 0) {
     return <span className="retweet-count">{count}</span>;
   } else {
     return null;
   }
-};
+}
 
 const RetweetButton = ({ count }) => (
   <span className="retweet-button">
     <i className="fa fa-retweet" />
-    {getRetweetCount(count)}
+    <Count count={count} />
   </span>
 );
 
