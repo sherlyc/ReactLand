@@ -44,6 +44,10 @@ function Message({ text }) {
   return <div className="message">{text}</div>;
 }
 
+Message.propTypes = {
+  text: PropTypes.string
+}
+
 function NameWithHandle({ author }) {
   const { name, handle } = author;
   return (
@@ -58,6 +62,10 @@ const Time = ({ time }) => {
   const timeString = moment(time).fromNow();
   return <span className="time">{timeString}</span>;
 };
+
+Time.propTypes = {
+  time: PropTypes.string
+}
 
 const ReplyButton = () => <i className="fa fa-reply reply-button" />;
 
