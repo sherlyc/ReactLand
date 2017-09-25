@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
+import "./index.css";
 
 function Stamp() {
   return <div className="stamp">Stamp</div>;
@@ -41,15 +42,15 @@ Envelope.propTypes = {
 };
 
 var returnLabel = {
-  name: "Full Name",
-  addressLine1: "123 Fake St.",
-  addressLine2: "Boston, MA 02118"
+  name: "Uther Pendragon",
+  addressLine1: "123 The Castle.",
+  addressLine2: "Kingdom, Camelot"
 };
 
 var recipientLabel = {
-  name: "Mrs. Receiver",
-  addressLine1: "123 James St.",
-  addressLine2: "San Francisco, CA 94101"
+  name: "Prince Arthur",
+  addressLine1: "85 Triple Goddess Lane.",
+  addressLine2: "Isle of The Blessed, Albion"
 };
 
 ReactDOM.render(
