@@ -1,1 +1,1 @@
-An Envelope React component !
+An Envelope component with Recipient and return address plus stamp. Created just for fun using React and CSS.
