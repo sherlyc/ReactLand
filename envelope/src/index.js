@@ -2,44 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import "./index.css";
-
-function Stamp() {
-  return <div className="stamp">Stamp</div>;
-}
-
-function AddressLabel({ mailingLabel, className }) {
-  var { name, addressLine1, addressLine2 } = mailingLabel;
-  return (
-    <div className={`mailingLabel ${className}`}>
-      <div className="name">{name}</div>
-      <div className="addressLine1">{addressLine1}</div>
-      <div className="addressLine2">{addressLine2}</div>
-    </div>
-  );
-}
-
-AddressLabel.propTypes = {
-  mailingLabel: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    addressLine1: PropTypes.string.isRequired,
-    addressLine2: PropTypes.string.isRequired
-  }).isRequired
-};
-
-function Envelope({ toPerson, fromPerson }) {
-  return (
-    <div className="envelope">
-      <AddressLabel className="to-label" mailingLabel={fromPerson} />
-      <AddressLabel className="from-label" mailingLabel={toPerson} />
-      <Stamp />
-    </div>
-  );
-}
-
-Envelope.propTypes = {
-  toPerson: PropTypes.object,
-  fromPerson: PropTypes.object
-};
+import Stamp from "./components/Stamp";
+import AddressLabel from "./components/AddressLabel";
+import Envelope from "./components/Envelope";
 
 var returnLabel = {
   name: "Uther Pendragon",
