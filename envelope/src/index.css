@@ -30,6 +30,7 @@ body {
   position: absolute;
   left: 280px;
   top: 150px;
+  font-size: 1.5em;
 }
 
 .from-label {
