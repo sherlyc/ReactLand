@@ -1,9 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Stamp from "./components/Stamp";
-import AddressLabel from "./components/AddressLabel";
 import Envelope from "./components/Envelope";
 
 var returnLabel = {
