@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./components/app";
 
 const container = document.getElementById("container");
-const myDiv = <div>My First React Component!</div>;
 
-ReactDOM.render(myDiv, container);
+ReactDOM.render(App, container);
