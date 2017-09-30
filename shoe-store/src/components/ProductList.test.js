@@ -38,3 +38,8 @@ it("should display the brand name in each `<li>` element", () => {
   //check that the brand name is contained somewhere in this element
   expect(firstElement.contains(mockProducts[0].brand)).toEqual(true);
 });
+
+it("should call `props.onProductSelect` when an <li> is clicked", () => {
+  const firstElement = wrapper.find("li").first();
+  firstElement.simulate("click");
+});
