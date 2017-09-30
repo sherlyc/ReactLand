@@ -1,7 +1,11 @@
 import React from "react";
 
 function ProductList(props) {
-  return <div>ProductList</div>;
+  return (
+    <ul>
+      {props.products.map(product => <li key={product.id}>{product.name}</li>)}
+    </ul>
+  );
 }
 
 export default ProductList;
