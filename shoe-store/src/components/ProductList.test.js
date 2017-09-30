@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-let mockProducts, wrapper;
+let mockProducts, wrapper, productSelectFn;
 
 beforeEach(() => {
   //This is run before every test
@@ -14,7 +14,13 @@ beforeEach(() => {
     { id: 2, name: "Mock Product 2", brand: "MockBrandB" },
     { id: 3, name: "Mock Product 3", brand: "MockBrandC" }
   ];
-  wrapper = shallow(<ProductList products={mockProducts} />);
+
+  productSelectFn = productSelected =>
+    console.log("You selected", productSelected);
+
+  wrapper = shallow(
+    <ProductList products={mockProducts} onProductSelect={productSelectFn} />
+  );
 });
 
 it("should render a list of products as an unordered list", () => {

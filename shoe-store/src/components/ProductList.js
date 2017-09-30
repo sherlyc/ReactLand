@@ -13,7 +13,8 @@ function ProductList(props) {
 }
 
 // ProductList.propTypes = {
-//   products: React.PropTypes.array.isRequired
+//   products: React.PropTypes.array.isRequired,
+//   onProductSelect: React.PropTypes.func.isRequired
 // };
 
 export default ProductList;
